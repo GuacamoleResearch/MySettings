@@ -20,7 +20,7 @@ jobs:
       - name: Dry-run settings in the PR
         id: dryrun
         continue-on-error: true
-        if: github.event_name == 'push'
+        if: github.event_name == 'pull_request'
         uses: elstudio/actions-settings@v3-beta
         with:
           debug: true
@@ -29,7 +29,7 @@ jobs:
 
 # Explicitly checkout main branch to ensure production settings are reset
       - name: Switch to main for production settings
-        if: github.event_name == 'push'
+        if: github.event_name == 'pull_request'
         uses: actions/checkout@v2
         with:
           ref: main
