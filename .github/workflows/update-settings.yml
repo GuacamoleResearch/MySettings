@@ -4,12 +4,15 @@ on:
   push:
     branches: [ main ]
     paths: [ .github/settings.yml ]
+
   pull_request:
     branches: [ main ]
     paths: [ .github/settings.yml ]
 
+  workflow_dispatch:
+
 jobs:
-  verify_pr:
+  apply_settings:
     runs-on: ubuntu-latest
 
     steps:
