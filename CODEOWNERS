@@ -1,0 +1,7 @@
+# Repository settings and governance
+/.github/workflows/update-settings.yml  @guacamole-admin
+/.github/settings.yml                   @guacamole-admin
+# The following is paranoia and excluded from this example
+# /CODEOWNERS                             @guacamole-admin
+
+# Additional repo or team-specifics
