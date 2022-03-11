@@ -7,16 +7,16 @@ repository:
   name: MySettings
 
   # A short description of the repository that will show up on GitHub
-  description: description of repo
+  description: Repo description
 
   # A URL with more information about the repository
-  homepage: https://example.github.io/
+  # homepage: https://example.github.io/
 
   # A comma-separated list of topics to set on the repository
   topics: github, probot
 
   # Either `true` to make the repository private, or `false` to make it public.
-  private: false
+  private: true
 
   # Either `true` to enable issues for this repository, `false` to disable them.
   has_issues: true
