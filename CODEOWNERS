@@ -1,6 +1,6 @@
 # Repository settings and governance
 /.github/workflows/update-settings.yml  @GuacamoleResearch/guacamole-admin
-/.github/settings.yml                   @GuacamoleResearch/@guacamole-admin
+/.github/settings.yml                   @GuacamoleResearch/guacamole-admin
 # The following is paranoia and excluded from this example
 # /CODEOWNERS                           @GuacamoleResearch/@guacamole-admin
 
