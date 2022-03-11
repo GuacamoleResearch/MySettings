@@ -1,0 +1,35 @@
+name: Update Repo Settings
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  verify_pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # If this is a PR, dry-run the PR and watch for errors
+      - name: Dry-run settings in the PR
+        id: dryrun
+        continue-on-error: true
+        if: github.event_name == 'push'
+        uses: elstudio/actions-settings@v2
+        with:
+          debug: true
+
+      # Explicitly checkout main branch to ensure production settings are reset
+      - name: Switch to main for production settings
+        if: github.event_name == 'push'
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      # If this is a PR, dry-run the PR and watch for errors
+      - name: Apply production repo settings
+        uses: elstudio/actions-settings@v2
