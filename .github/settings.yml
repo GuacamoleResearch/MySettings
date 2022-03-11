@@ -96,11 +96,11 @@ teams:
   - name: GuacamoleResearch/guacamole-admin
     permission: admin
     
-  - name: GuacamoleResearch/MySettings-admin
-    permission: maintain
+  # - name: GuacamoleResearch/MySettings-admin
+  #   permission: maintain
     
-  - name: GuacamoleResearch/MySettings-maintainers
-    permission: maintain
+  # - name: GuacamoleResearch/MySettings-maintainers
+  #   permission: maintain
     
 branches:
   - name: main
