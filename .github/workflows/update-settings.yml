@@ -22,8 +22,10 @@ jobs:
         uses: elstudio/actions-settings@v2
         with:
           debug: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Explicitly checkout main branch to ensure production settings are reset
+# Explicitly checkout main branch to ensure production settings are reset
       - name: Switch to main for production settings
         if: github.event_name == 'push'
         uses: actions/checkout@v2
@@ -33,3 +35,5 @@ jobs:
       # If this is a PR, dry-run the PR and watch for errors
       - name: Apply production repo settings
         uses: elstudio/actions-settings@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
