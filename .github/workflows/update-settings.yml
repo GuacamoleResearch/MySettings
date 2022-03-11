@@ -19,7 +19,7 @@ jobs:
         id: dryrun
         continue-on-error: true
         if: github.event_name == 'push'
-        uses: elstudio/actions-settings@v2
+        uses: elstudio/actions-settings@v3-beta
         with:
           debug: true
         env:
@@ -34,6 +34,6 @@ jobs:
 
       # If this is a PR, dry-run the PR and watch for errors
       - name: Apply production repo settings
-        uses: elstudio/actions-settings@v2
+        uses: elstudio/actions-settings@v3-beta
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
