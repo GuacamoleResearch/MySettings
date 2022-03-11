@@ -9,7 +9,7 @@ on:
     paths: [ .github/settings.yml ]
 
 jobs:
-  verify_pr:
+  apply_settings:
     runs-on: ubuntu-latest
 
     steps:
