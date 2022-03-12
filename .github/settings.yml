@@ -7,7 +7,7 @@ repository:
   name: MySettings
 
   # A short description of the repository that will show up on GitHub
-  description: description of repo
+  description: Settings demo repository
 
   # A URL with more information about the repository
   homepage: https://www.github.com
@@ -105,7 +105,7 @@ teams:
   #   permission: push
 
 branches:
-  - name: master
+  - name: main
     # https://docs.github.com/en/rest/reference/repos#update-branch-protection
     # Branch Protection settings. Set to null to disable
     protection:
