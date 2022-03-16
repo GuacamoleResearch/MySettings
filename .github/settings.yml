@@ -7,7 +7,7 @@ repository:
   name: MySettings
 
   # A short description of the repository that will show up on GitHub
-  description: Settings demo repository
+  description: Settings demo repository!!!!
 
   # A URL with more information about the repository
   homepage: https://www.github.com
@@ -112,7 +112,7 @@ branches:
       # Required. Require at least one approving review on a pull request, before merging. Set to null to disable.
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
-        required_approving_review_count: 1
+        required_approving_review_count: 2
         # Dismiss approved reviews automatically when a new commit is pushed.
         dismiss_stale_reviews: true
         # Blocks merge until code owners have reviewed.
